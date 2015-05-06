@@ -1,0 +1,25 @@
+security:
+    firewalls:
+        secured_area:
+            pattern:    ^/
+            anonymous: ~
+            http_basic:
+                realm: "Secured Demo Area"
+            form_login:
+                login_path:  /login
+                check_path:  /login_check
+                default_target_path: /main
+
+    access_control:
+        - { path: ^/main, roles: ROLE_ADMIN }
+
+    providers:
+        in_memory:
+             memory:
+                users:
+                    abou78180:  { password: hockey, roles: 'ROLE_ADMIN' }
+                    bestofgolf:  { password: bestofgolf, roles: 'ROLE_ADMIN' }
+                    admin: { password: kit, roles: 'ROLE_ADMIN' }
+
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext

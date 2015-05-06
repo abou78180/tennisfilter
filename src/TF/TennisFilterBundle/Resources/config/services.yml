@@ -1,0 +1,4 @@
+services:
+#    tf_tennis_filter.example:
+#        class: TF\TennisFilterBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

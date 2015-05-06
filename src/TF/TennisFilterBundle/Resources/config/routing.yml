@@ -1,0 +1,11 @@
+tf_tennis_filter_login:
+    path:     /
+    defaults: { _controller: TFTennisFilterBundle:Security:login }
+
+tf_tennis_filter_homepage:
+    path:     /main
+    defaults: { _controller: TFTennisFilterBundle:Main:index }
+
+tf_tennis_filter_login2:
+    path:     /login2
+    defaults: { _controller: TFTennisFilterBundle:Security:login2 }
